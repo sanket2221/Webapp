@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<style>
+    body{
+        background-image: conic-gradient();
+    }
+    button{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+        border: blueviolet;
+    }
+    input{
+        border: 3px solid #555;
+        margin: 4px 2px;
+        padding: 16px 32px;
+}
+
+</style>
+<body>
+    <h1>Predict Salary Based on Experience</h1>
+    <hr size="3" noshade>
+    <form action="{{ url_for('predict')}}" method="post" >
+        <input type="number" name="exp" placeholder="Experience">
+        <button type="submit" class = 'btn btn-success'>Predict</button>
+    </form>
+    <br>
+    <br>
+    {{ prediction_text }}
+</body>
+</html>
